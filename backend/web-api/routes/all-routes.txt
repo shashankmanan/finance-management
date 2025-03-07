@@ -1,0 +1,12 @@
+
+
+/transaction/stocks
+
+/transaction/stocks/purchased
+GET gets all stocks
+http://localhost:5000/api/transaction/stocks/purchased
+
+/transaction/stocks/add
+POST add a new stock 
+http://localhost:5000/api/transaction/stocks/add
+/transaction/stocks/update
