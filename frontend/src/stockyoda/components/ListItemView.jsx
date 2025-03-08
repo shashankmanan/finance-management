@@ -1,6 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default function ListItemView({name,buy_price,invested_amt,quantity}) {
+export default function ListItemView({item}) {
+
+  const {symbol,name,buy_price,invested_amt,quantity} = item
+  const slugname = name.toLowerCase().replaceAll(" ","_")
+
   return (
     <div style={{display:'flex', flexDirection:'row' , justifyContent:"space-evenly",alignItems:"center"}}>
             <div>
@@ -23,7 +28,10 @@ export default function ListItemView({name,buy_price,invested_amt,quantity}) {
                 
             </div>
             <div>
-                <button>View</button>
+                <Link to={`/stockyoda/stocks/${slugname}/view`} state={{stockData: item}}>
+                    <button style={{margin: "5px"}}>View</button>
+                </Link>
+                <button>Edit</button>
             </div>
     </div>
   )

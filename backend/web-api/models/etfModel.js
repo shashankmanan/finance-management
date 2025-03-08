@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const stockSchema = new mongoose.Schema(
+const etfSchema = new mongoose.Schema(
   {
     symbol: {
       type: String,
@@ -26,14 +26,14 @@ const stockSchema = new mongoose.Schema(
     purchaseDate: {
       type: Date,
       default: Date.now,
-    },
+    }, 
     category: {
-      type:String 
+        type:String 
     }
   },
   { timestamps: true } 
 );
 
-const Stock = mongoose.model("Stock", stockSchema);
+const ETF = mongoose.model("ETF", etfSchema);
 
-module.exports = Stock;
+module.exports = ETF;
