@@ -27,6 +27,13 @@ export default function IndiView() {
             <h1>Particulars:</h1>
             <table>
                 <tbody>
+                {
+                    item.symbol ?
+                    <tr>
+                    <td><h3>Symbol:</h3></td>
+                    <td><h3>{item.symbol}</h3></td>
+                    </tr> : <></>
+                }
                 <tr>
                     <td><h3>Name:</h3></td>
                     <td><h3>{name}</h3></td>

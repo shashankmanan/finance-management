@@ -28,7 +28,7 @@ export default function ListItemView({item}) {
                 
             </div>
             <div>
-                <Link to={`/stockyoda/stocks/${slugname}/view`} state={{stockData: item}}>
+                <Link to={`/stockyoda/stocksandetfs/${slugname}/view`} state={{stockData: item}}>
                     <button style={{margin: "5px"}}>View</button>
                 </Link>
                 <button>Edit</button>

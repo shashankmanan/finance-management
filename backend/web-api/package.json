@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1" ,
+    "server" : "nodemon server.js >> logs.txt"
   },
   "author": "Shashank Manan",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "axios": "^1.8.2",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",

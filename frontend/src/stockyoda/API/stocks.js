@@ -3,7 +3,7 @@ import axios from 'axios'
 const getAllBoughtStocksData = async () => {
     try {
         console.log("Fetching data...");
-        const URL = "http://localhost:5000/api/transaction/stocks/purchased";
+        const URL = "http://localhost:5004/api/transaction/stocks/purchased";
         const response = await axios.get(URL);
         console.log("Response received:", response.data);
         const {stocks_list} = response.data
@@ -15,7 +15,7 @@ const getAllBoughtStocksData = async () => {
 };
 
 const addAPurchasedStock = async (payload) => {
-    const BASE_URL = "http://localhost:5000/api/transaction/stocks/add"
+    const BASE_URL = "http://localhost:5004/api/transaction/stocks/add"
     try {
         console.log("sending request")
         console.log(payload)

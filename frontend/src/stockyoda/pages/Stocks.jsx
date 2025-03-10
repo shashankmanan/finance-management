@@ -27,9 +27,9 @@ export default function Stocks() {
     } , [])
   return (
     <div>
-          <StockYodaLogo />
+        <StockYodaLogo />
         <h2>My stocks</h2>
-        <Dashboard category="stocks" selfpage="false" invested={totalInvested}/>
+        <Dashboard category="stocks" invested={totalInvested}/>
         <AddAsset update={updateStocksList} category="stocks"/>
         <h3>List:</h3>
         <List list={list}/>

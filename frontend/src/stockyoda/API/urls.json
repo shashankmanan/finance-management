@@ -1,0 +1,6 @@
+
+{
+    "GET_ALL_STOCKS" : "http://localhost:5004/api/transaction/stocks/purchased" ,
+    "GET_ALL_ETFS" : "http://localhost:5004/api/transaction/etfs/purchased" ,
+    "GET_ALL_MFS" : "http://localhost:5004/api/transaction/mfs/purchased"
+}

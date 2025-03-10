@@ -33,14 +33,12 @@ export default function AddAsset({ update, category }) {
       "name": name,
       "buy_price": Number(buy_price),
       "quantity": Number(quantity),
-      "total_amt": Number(total_amt),
+      "invested_amt": Number(total_amt),
       "buy_date": buy_date,
       "category" : etfCategory
     };
-    console.log("payload_set");
+    console.log("payload_set:", newPayload);
     let response = ""
-    if(newPayload.name == "" || newPayload.buy_price == 0 || newPayload.quantity == 0 || newPayload.total_amt == 0)
-        return
     if(category == "etfs") {
         response = await addAPurchasedEtf(newPayload);
     }

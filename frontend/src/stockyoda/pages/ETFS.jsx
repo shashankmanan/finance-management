@@ -31,7 +31,7 @@ export default function ETFS() {
     <div>
         <StockYodaLogo />
         <h2>My Etfs</h2>
-        <Dashboard category="etfs" selfpage="false" invested={totalInvested}/>
+        <Dashboard category="etfs" invested={totalInvested}/>
         <AddAsset update={updateEtfsList} category="etfs"/> 
         <h3>List:</h3>
         <List list={list}/>

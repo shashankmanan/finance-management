@@ -3,7 +3,7 @@ import axios from 'axios'
 const getAllBoughtEtfData = async () => {
     try {
         console.log("Fetching data...");
-        const URL = "http://localhost:5000/api/transaction/etfs/purchased";
+        const URL = "http://localhost:5004/api/transaction/etfs/purchased";
         const response = await axios.get(URL);
         console.log("Response received:", response.data);
         const {etfs_list} = response.data
@@ -15,7 +15,7 @@ const getAllBoughtEtfData = async () => {
 };
 
 const addAPurchasedEtf = async (payload) => {
-    const BASE_URL = "http://localhost:5000/api/transaction/etfs/add"
+    const BASE_URL = "http://localhost:5004/api/transaction/etfs/add"
     try {
         console.log("sending request")
         console.log(payload)

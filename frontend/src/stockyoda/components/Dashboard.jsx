@@ -26,9 +26,18 @@ export default function Dashboard({category,selfpage,invested}) {
             </div>
             
         </div>
-        { selfpage != "false" ? 
-        <h3>Explore more in <Link to={`/stockyoda/${category}`}>{category} =~</Link></h3>
-        : <></>
+        { selfpage ? 
+        <div style={{display:"flex",justifyContent:"space-evenly"}}> 
+            <h3>Explore more in <Link to={`/stockyoda/${category}`}>{category} =~</Link></h3>
+            <Link to={`/analyticsmonkey/${category}`}>
+                <h3>Analytics =~</h3> 
+        </Link>
+        </div>
+        : <div style={{textAlign:"right",marginRight:"200px"}}>
+        <Link to={`/analyticsmonkey/${category}`}>
+                <h3>Analytics =~</h3> 
+        </Link>
+        </div>
         }
     </div>
   )
